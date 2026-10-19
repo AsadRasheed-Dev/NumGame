@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guess The Number</title>
+<link rel="stylesheet" href="style.css">
+<base target="_blank">
+</head>
+<body>
+
+<div class="card">
+
+  <!-- ===== NAME SCREEN ===== -->
+  <div id="nameScreen">
+    <h1>Guess The Number</h1>
+    <p class="sub">a tiny console game, dressed up a bit</p>
+    <hr class="rule">
+    <label for="pname">Player name</label>
+    <div class="row">
+      <input type="text" id="pname" maxlength="16" placeholder="type your name..." autocomplete="off">
+      <button class="btn" id="startBtn">Start</button>
+    </div>
+  </div>
+
+  <!-- ===== GAME SCREEN ===== -->
+  <div id="gameScreen" class="hidden">
+    <h1>Guess The Number</h1>
+    <p class="sub">between 1 and 100 &middot; 7 attempts &middot; good luck, <span id="pnameShow"></span></p>
+    <hr class="rule">
+
+    <div class="hud">
+      <div>Attempts left: <b id="attLeft">7</b></div>
+      <div class="attempts" id="pips"></div>
+    </div>
+
+    <div class="row">
+      <input type="number" id="guessInput" min="1" max="100" placeholder="your guess (1-100)">
+      <button class="btn" id="guessBtn">Guess</button>
+    </div>
+
+    <ul class="log" id="log"></ul>
+    <div class="msg info" id="msg">I'm thinking of a number between 1 and 100...</div>
+
+    <div class="scorebox">
+      <div>ROUND <span id="roundNo">1</span> &middot; SCORE</div>
+      <div class="num" id="score">0</div>
+    </div>
+
+    <hr class="rule">
+    <div class="row">
+      <button class="btn gray" id="newRoundBtn">New Round</button>
+      <button class="btn red" id="quitBtn">Quit</button>
+    </div>
+  </div>
+
+  <p class="foot">&gt; compiled with boredom &amp; chai &lt;</p>
+</div>
+
+<script src="script.js">
+
+</script>
+
+</body>
+</html>
